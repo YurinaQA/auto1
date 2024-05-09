@@ -1,9 +1,9 @@
 package ru.netology;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
+import org.junit.Assert;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
 
@@ -11,7 +11,6 @@ public class CashbackHackServiceTest {
 
     @Test
     public void acceptableLimit() {
-        CashbackHackService service = new CashbackHackService();
 
         int expected = 999;
         int actual = service.remain(1001);
@@ -22,7 +21,6 @@ public class CashbackHackServiceTest {
 
     @Test
     public void remainUnderLimit() {
-        CashbackHackService service = new CashbackHackService();
 
         int expected = 1;
         int actual = service.remain(999);
@@ -33,7 +31,6 @@ public class CashbackHackServiceTest {
 
     @Test
     public void remainOnLimit() {
-        CashbackHackService service = new CashbackHackService();
 
         int expected = 0;
         int actual = service.remain(1000);
